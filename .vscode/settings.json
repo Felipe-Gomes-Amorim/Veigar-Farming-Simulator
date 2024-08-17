@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Veigar Farming Simulator.sln"
+    "dotnet.defaultSolution": "Veigar-Farming-Simulator.sln"
 }
