@@ -67,7 +67,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.17672658, y: 0.15463585}
@@ -124,6 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 0
   exp: {fileID: 3240787377498883357, guid: 1101079db4e497d4fabfa240249d0179, type: 3}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &3995701603098873172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,16 +139,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd34ac5e8d00eb4a99dfb5421e0e8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 5
-  life: 5
+  maxLife: 3
+  life: 3
   speed: 1.1
-  attack: 2
+  attack: 6
   projectileLife: 0
   exp: 0
   lvl: 0
   expCap: 0
   timer: 0
-  powerUps: 0000000000000000
+  powerUpSprite: []
+  powerUps: 00000000
+  powerUpIcon: []
+  powerUpLevels: []
+  statsIndex: []
+  cooldowns: []
+  cooldownsIndex: 
 --- !u!114 &1260121785673630383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +185,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

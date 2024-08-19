@@ -57,8 +57,8 @@ public class Shop : MonoBehaviour
     }
 
     public void Close(int click){
-        //CONSERTEI NAO MEXA NISSO QUE QUEBRA
-        stats.powerUps[selected[click]]++;
+        //eu mexi noq vc mandou nao mexer, agora sofra pq eu consertei o problema
+        stats.GetPowerUp(selected[click]);
         shops.SetActive(false);
         Time.timeScale = 1;
 

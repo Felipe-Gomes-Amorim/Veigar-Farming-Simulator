@@ -8,7 +8,7 @@ public class Projectiles : MonoBehaviour
     private float speed = 20; 
     private float defaultSpeedMultiplier = 30;   
     [HideInInspector]
-    public Transform target; 
+    public Vector3 target; 
     private float lifeTime;
     [SerializeField]
     private float lifeTotal;
@@ -35,7 +35,7 @@ public class Projectiles : MonoBehaviour
         damage += stats.powerUps[type] * 10;
         rb = GetComponent<Rigidbody2D>();
         if(type == 1 || type == 2)    
-            transform.right = target.position - transform.position;
+            transform.right = target - transform.position;
         transform.localScale = new Vector3((stats.powerUps[type] / 5) + 1, (stats.powerUps[type] / 5) + 1, (stats.powerUps[type] / 5) + 1);
     }
 
@@ -74,5 +74,8 @@ public class Projectiles : MonoBehaviour
             stats.attack++;
 
         }
+    }
+    public int GetTypes(){
+        return type;
     }
 }
